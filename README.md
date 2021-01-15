@@ -1,2 +1,3 @@
 # simmer
-For Hack the North 2021.C Contributors: Vyomesh Iyengar, Michelle Lin, Siena Cizdziel
+For Hack the North 2021.
+Contributors: Vyomesh Iyengar, Michelle Lin, Siena Cizdziel
