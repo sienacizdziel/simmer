@@ -4,6 +4,7 @@
     width: 60%;
     height: 100%;
     margin: 2vh;
+    margin-top: 0vh;
     padding: 2vh;
     text-align: center;
     overflow: scroll;
@@ -59,6 +60,7 @@ table, tr, td {
 #social {
     float: left;
     margin: 2vh;
+    margin-top: 0vh;
     margin-left: 0;
     background-color: #EDB245;
     color: white;
@@ -66,8 +68,27 @@ table, tr, td {
     float: right;
     text-align: center;
     padding: 2vh;
+    line-height: 15px;
 }
 
 .friends {
+    margin: 2vh;
+}
+
+.left {
     float: left;
+}
+
+.right {
+    float: right;
+}
+
+.friend-container {
+    width: 100%;
+    margin-bottom: 10vh;
+    height: 10vh;
+}
+
+.friend-recipe {
+    padding-top: 15%;
 }
