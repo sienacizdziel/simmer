@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const RecipeData = [
+export const NavData = [
     {
         title: 'Recipe Name',
         img: 'image url',

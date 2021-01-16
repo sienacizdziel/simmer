@@ -1,5 +1,3 @@
-
-
 .menu-bars {
     margin-left: 2rem;
     font-size: 2rem;
@@ -8,15 +6,16 @@
 
 .nav-menu {
     background-color: #C4C4C4;
-    width: 280px;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: -100%;
-    transition: 850ms;
+    width: 20%;
+    height: 50vh;
+    margin: 2vh;
+    padding: 2vh;
+    text-align: center;
+    overflow: scroll;
+    overflow-x: hidden;
+    float: left;
 }
+
 
 .nav-menu.active {
     left: 0;
