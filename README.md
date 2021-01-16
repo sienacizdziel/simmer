@@ -1,3 +1,7 @@
+# simmer
+For Hack the North 2021.
+Contributors: Vyomesh Iyengar, Michelle Lin, Siena Cizdziel, Andy Wu
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
