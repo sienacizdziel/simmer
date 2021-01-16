@@ -3,6 +3,7 @@
         <title>Add a Recipe</title>
         <link rel="stylesheet" href="style.css" />
         <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
     </head>
     <body>
 
@@ -10,22 +11,24 @@
             <h1>Add your Recipe</h1>
             <input type="text" placeholder="Recipe Name..." id="recipe_field" />
             <input type="text" placeholder="Ingredient #1..." id="ingredient_1_field" />
+            <input type="text" placeholder="Cuisine..." id="cuisine_field" />
             <button onclick="submit()">Submit Recipe</button>
         </div>
     <script>
     // Your web app's Firebase configuration
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    var firebaseConfig = {
-        apiKey: "AIzaSyCjO5G0GcNPneTrBdracN1X6LSBDFAU7es",
-        authDomain: "simmer-hackthenorth.firebaseapp.com",
-        projectId: "simmer-hackthenorth",
-        storageBucket: "simmer-hackthenorth.appspot.com",
-        messagingSenderId: "980809921947",
-        appId: "1:980809921947:web:bfe55452134d18e0a39d3e",
-        measurementId: "G-D0JRLHDVNQ"
-    };
+        var firebaseConfig = {
+            apiKey: "AIzaSyCjO5G0GcNPneTrBdracN1X6LSBDFAU7es",
+            authDomain: "simmer-hackthenorth.firebaseapp.com",
+            projectId: "simmer-hackthenorth",
+            storageBucket: "simmer-hackthenorth.appspot.com",
+            messagingSenderId: "980809921947",
+            appId: "1:980809921947:web:bfe55452134d18e0a39d3e",
+            measurementId: "G-D0JRLHDVNQ"
+        };
+
     // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
+        firebase.initializeApp(firebaseConfig);
     </script>
     <script src="index.js"></script>
     </body>
