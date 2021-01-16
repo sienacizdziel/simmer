@@ -4,6 +4,7 @@ import Home from "./containers/Home";
 import AddRecipe from "./containers/AddRecipe";
 import Recipe from "./containers/RecipeInfo/Recipe";
 import NotFound from "./containers/NotFound";
+import FindRecipe from "./containers/FindRecipe"
 
 export default function Routes() {
   return (
@@ -16,6 +17,9 @@ export default function Routes() {
         </Route>
         <Route exact path="/addrecipe">
             <AddRecipe />
+        </Route>
+        <Route exact path="/search">
+            <FindRecipe />
         </Route>
         <Route>
             <NotFound />
