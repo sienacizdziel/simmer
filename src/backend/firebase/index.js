@@ -9,7 +9,7 @@ function submit() {
   window.alert("ingredient 1 is" + ingredient_1);
   window.alert("cuisine is" + cuisine);
   
-  db.collection("Recipe")
+  db.collection("Recipes")
     .doc(recipe_name)
     .set({
       recipeIngredient: ingredient_1,
