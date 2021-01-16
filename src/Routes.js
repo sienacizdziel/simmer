@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom"; // switch renders first matching route 
 import Home from "./containers/Home";
-import AddRecipe from "./containers/AddRecipe";
+import AddRecipe from "./containers/AddInfo/AddRecipe";
 import Recipe from "./containers/RecipeInfo/Recipe";
 import NotFound from "./containers/NotFound";
 import FindRecipe from "./containers/FindRecipe";
