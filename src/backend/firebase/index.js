@@ -9,18 +9,19 @@ function submit() {
   window.alert("ingredient 1 is" + ingredient_1);
   window.alert("cuisine is" + cuisine);
   
-//   db.collection("Recipe")
-//     .doc(recipe_name)
-//     .set({
-//       recipeIngredient: ingredient_1,
-//       recipeCuisine: cuisine
-//     })
-//     .then(function () {
-//       console.log("added in recipe");
-//     })
-//     .catch(function (error) {
-//       console.log("got an error", error);
-//     });
+  db.collection("Recipes")
+    .doc(recipe_name)
+    .set({
+      recipeIngredient: ingredient_1,
+      recipeCuisine: cuisine
+    })
+    .then(function () {
+      console.log("added in recipe");
+    })
+    .catch(function (error) {
+      console.log("got an error", error);
+    });
     window.location.replace("test.html");
 
 }
+
