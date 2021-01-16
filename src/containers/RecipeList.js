@@ -3,7 +3,7 @@ import React from 'react';
 const RecipeList = ({recipeList=[]}) => {
   return (
     <>
-    { recipieList.map((data,index) => {
+    { recipeList.map((data,index) => {
         if (data) {
           return (
             <div key={data.name}>
