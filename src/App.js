@@ -1,7 +1,18 @@
-// replace these values with those generated in your TokBox Account
-var apiKey = "YOUR_API_KEY";
-var sessionId = "YOUR_SESSION_ID";
-var token = "YOUR_TOKEN";
+import './App.css';
+import Routes from './Routes';
+import { Link } from "react-router-dom";
 
-// (optional) add server code here
-initializeSession();
+function App() {
+  return (
+    <div className="App">
+      <div className="navbar">
+          <Link to="/">Home</Link>
+          <Link to="/recipe">Recipe Page</Link>
+          <Link to="/addrecipe">Add Recipe Page</Link>
+      </div>
+      <Routes />
+    </div>
+  );
+}
+
+export default App;
