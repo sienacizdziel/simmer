@@ -1,5 +1,22 @@
 import React from "react";
 import "./Home.css";
+import firebase from 'firebase';
+
+var config = {
+  apiKey: "AIzaSyCjO5G0GcNPneTrBdracN1X6LSBDFAU7es",
+  authDomain: "simmer-hackthenorth.firebaseapp.com",
+  databaseURL: "https://simmer-hackthenorth-default-rtdb.firebaseio.com",
+  projectId: "simmer-hackthenorth",
+  storageBucket: "simmer-hackthenorth.appspot.com",
+  messagingSenderId: "980809921947",
+  appId: "1:980809921947:web:bfe55452134d18e0a39d3e",
+  measurementId: "G-D0JRLHDVNQ"
+};
+
+firebase.initializeApp(config);
+const database = firebase.database();
+const ref = database.ref('recipes');
+
 
 export default function Home() {
   return (
@@ -53,6 +70,31 @@ export default function Home() {
     </div>
 
     <div id="social">
+    <div className="container">
+          <table id="example" class="display table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>FirstName</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                </tr>
+            </thead>
+            <tbody>
+            {this.state.studentslist.map(data => {
+                return (
+                    <tr>     
+                    <td>{data.firstName}</td>
+                    <td>{data.lastName}</td>
+                    <td>{data.email}</td>
+                    <td>{data.mobileNumber}</td>
+                    </tr>
+                );
+                })}
+            </tbody>
+         </table>
+         </div>
+
       <h1>Social</h1>
       <h2>see what your friends are cooking!</h2>
       <div className="friend-container">
