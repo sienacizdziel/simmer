@@ -1,12 +1,7 @@
-import './App.css';
-import Routes from './Routes';
+// replace these values with those generated in your TokBox Account
+var apiKey = "YOUR_API_KEY";
+var sessionId = "YOUR_SESSION_ID";
+var token = "YOUR_TOKEN";
 
-function App() {
-  return (
-    <div className="App">
-      <Routes />
-    </div>
-  );
-}
-
-export default App;
+// (optional) add server code here
+initializeSession();
