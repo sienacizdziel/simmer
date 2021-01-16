@@ -55,11 +55,26 @@ export default function Home() {
     <div id="social">
       <h1>Social</h1>
       <h2>see what your friends are cooking!</h2>
-      <div>
-        <button className="user friends">friend profile</button>
-        <h2>caesar salad</h2>
+      <div className="friend-container">
+        <button className="user friends left">friend profile</button>
+        <h2 className="friend-recipe">CAESAR SALAD</h2>
+        <h3>michelle:)</h3>
       </div>
-
+      <div className="friend-container">
+        <button className="user friends right">friend profile</button>
+        <h2 className="friend-recipe">HOT BUFFALO WINGS</h2>
+        <h3>siena123</h3>
+      </div>
+      <div className="friend-container">
+        <button className="user friends left">friend profile</button>
+        <h2 className="friend-recipe">TACOS</h2>
+        <h3>wooandywoo</h3>
+      </div>
+      <div className="friend-container">
+        <button className="user friends right">friend profile</button>
+        <h2 className="friend-recipe">RAMEN</h2>
+        <h3>vyomesh!</h3>
+      </div>
     </div>
   </>
   );
