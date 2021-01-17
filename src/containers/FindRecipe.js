@@ -1,7 +1,7 @@
 import React from "react";
 import "./FindRecipe.css";
 
-export default function AddRecipe() {
+export default function FindRecipe() {
   return (
   <>
     <div className="searchbar">
