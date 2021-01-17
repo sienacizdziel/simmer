@@ -8,6 +8,8 @@
     text-align: center;
 }
 
+
+
 li {
     font-size: 16px;
 }
@@ -21,7 +23,7 @@ li {
     margin-right: auto;
     height: 55vh;
     width: 98%;
-    background-color: #f8d188;
+    background-color: white;
     color: white;
     text-align: left;
     padding: 2vh;
