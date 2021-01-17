@@ -34,8 +34,9 @@ class App extends React.Component {
             <table id="example" class="display table">
               <thead class="thead-dark">
                   <tr>
+                      <th>Chef Name</th>
                       <th>Recipe Name</th>
-                      <th>Ingredient 1</th>
+                      <th>Ingredients</th>
                       <th>Cuisine</th>
                   </tr>
               </thead>
@@ -44,6 +45,7 @@ class App extends React.Component {
                   return (
                     <>
                       <tr>
+                      <td>{data.my_name}</td>
                       <td>{data.recipe_name}</td>
                       <td>{data.ingredient1}</td>
                       <td>{data.cuisine}</td>
@@ -55,67 +57,7 @@ class App extends React.Component {
               
            </table>
        </div>
-       <div class="jumbotron text-center bg-sky">
-            <h3>Friend List</h3>
-        </div>
-
-       <div className="container">
-            <table id="example" class="display table">
-              <thead class="thead-dark">
-                  <tr>
-                      <th>Friend</th>
-                      <th>Favorite Cuisine</th>
-                      <th>Cooking Tonight</th>
-                  </tr>
-              </thead>
-              <tbody>
-              {this.state.recipelist.map(data => {
-                  
-                  return (
-                      <tr>     
-                      <td>{data.friendname}</td>
-                      <td>{data.cuisine}</td>
-                      <td>{data.cookingtonight}</td>
-                      </tr>
-                      
-                  );
-                 
-                  })}         
-              </tbody>
-              
-           </table>
-       </div>
-       
-
-       <div class="jumbotron text-center bg-sky">
-            <h3>Favorite Recipes</h3>
-        </div>
-
-       <div className="container">
-            <table id="example" class="display table">
-              <thead class="thead-dark">
-                  <tr>
-                      <th>Recipe Name</th>
-                      <th>Ingredient 1</th>
-                      <th>Cuisine</th>
-                  </tr>
-              </thead>
-              <tbody>
-              {this.state.recipelist.map(data => {
-                  return (
-                      <tr>     
-                      <td>{data.recipe_name}</td>
-                      <td>{data.ingredient1}</td>
-                      <td>{data.cuisine}</td>
-                      </tr>
-                  );
-                  })}         
-              </tbody>
-              
-           </table>
-       </div>
-
-
+    
       </div>
 
       
