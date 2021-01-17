@@ -1,90 +1,51 @@
 import React from "react";
-import { Form, Input, Button, Checkbox } from 'antd';
+import Form from 'react-bootstrap/Form';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './AddRecipe.css';
-import TextArea from "antd/lib/input/TextArea";
-
-const layout = {
-    labelCol: {
-        span: 16,
-    },
-    wrapperCol: {
-        span: 16,
-    },
-};
-const tailLayout = {
-    wrapperCol: {
-        offset: 8,
-        span: 16,
-    },
-};
 
 
-const AddRecipe = () => {
-    const [form] = Form.useForm();
-
-    const onFinish = (values) => {
-        console.log(values);
-    };
-    const onReset = () => {
-        form.resetFields();
-    };
-
+export default function AddRecipe() {
     return (
-        <div id="wrap">
-            <div id="name">
-                <h1>Recipe Name</h1>
-                    <div>
-                        <button className="image">image</button>
-                    </div>
-                <h2>Type</h2>
-                <h2>Category</h2>
-                <h2>Rating</h2>
+    <div id= "wrap">
+        <div id="recipe">
+            <h1> Recipe Name </h1>
+            <div>
+                <button className="image">image</button>
             </div>
-            <div id="form">
-            <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
-                <Form.Item
-                    name="name"
-                    label="Name"
-                >
-                    <Input />
-                </Form.Item>
-                <Form.Item
-                    name="type"
-                    label="Type"
-                >
-                    <Input />
-                </Form.Item>
-                <Form.Item
-                    name="category"
-                    label="Category"
-                >
-                    <Input />
-                </Form.Item>
-                <Form.Item
-                    name="ingred"
-                    label="Ingredients"
-                >
-                    <Input />
-                </Form.Item>
-                <Form.Item
-                    name="directions"
-                    label="Directions"
-                >
-                    <TextArea rows={4} />
-                </Form.Item>
-                <Form.Item {...tailLayout}>
-                    <Button type="primary" htmlType="submit">
-                    Submit
-                    </Button>
-                    <Button htmlType="button" onClick={onReset}>
-                    Reset
-                    </Button>
-                </Form.Item>
-            </Form>
-            </div>
-            <div class="clearer"></div>
+            <h2>Type</h2>
+            <h2>Category</h2>
+            <h2>Rating</h2>
         </div>
+        <div id="menu">
+            <Form>
+                <Form.Group controlId="exampleForm.ControlInput1">
+                    <Form.Label>Name</Form.Label>
+                    <Form.Control size="lg" type="name"/>
+                </Form.Group>
+                <Form.Group controlId="exampleForm.ControlInput1">
+                    <Form.Label>Type</Form.Label>
+                    <Form.Control size="lg" type="name" />
+                </Form.Group>
+                <Form.Group controlId="exampleForm.ControlSelect1">
+                    <Form.Label>Category</Form.Label>
+                    <Form.Control as="select">
+                    <option>option 1</option>
+                    <option>option 2</option>
+                    <option>option 3</option>
+                    <option>option 4</option>
+                    <option>option 5</option>
+                    </Form.Control>
+                </Form.Group>
+                <Form.Group controlId="exampleForm.ControlTextarea1">
+                    <Form.Label>Ingredients</Form.Label>
+                    <Form.Control as="textarea" rows={6} />
+                </Form.Group>
+                <Form.Group controlId="exampleForm.ControlTextarea2">
+                    <Form.Label>Directions</Form.Label>
+                    <Form.Control as="textarea" rows={4} />
+                </Form.Group>
+            </Form>
+        </div>
+    </div>
     );
-};
-
-export default AddRecipe;
+}
