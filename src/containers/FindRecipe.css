@@ -1,17 +1,17 @@
 .searchbar{
     text-align: center;
-    font-size: large;
+    font-size: 43px;
     padding: 3px;
     border: 1px;
     border-color: black;
-    border-radius: 2px;
+    border-radius: 15px 50px 30px 5px;
 }
 
 .img{
-    display:block;
+    display:flex;
     margin: auto;
     box-shadow: 2px 2px 4px 1px black;
-    width: 100%;
+    padding: 5px;
 }
 
 #leftimg{
