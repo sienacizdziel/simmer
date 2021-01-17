@@ -34,8 +34,9 @@ class App extends React.Component {
             <table id="example" class="display table">
               <thead class="thead-dark">
                   <tr>
+                      <th>Chef Name</th>
                       <th>Recipe Name</th>
-                      <th>Ingredient 1</th>
+                      <th>Ingredients</th>
                       <th>Cuisine</th>
                   </tr>
               </thead>
@@ -44,6 +45,7 @@ class App extends React.Component {
                   return (
                     <>
                       <tr>
+                      <td>{data.my_name}</td>
                       <td>{data.recipe_name}</td>
                       <td>{data.ingredient1}</td>
                       <td>{data.cuisine}</td>

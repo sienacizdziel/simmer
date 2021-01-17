@@ -39,12 +39,14 @@ class App extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
+    let my_name = this.refs.my_name.value;
     let recipe_name = this.refs.recipe_name.value;
     let ingredient1 = this.refs.ingredient1.value;
     let cuisine = this.refs.cuisine.value;
     let uid = this.refs.uid.value;
 
-    Firebase.database().ref('Recipes/' + recipe_name).set({
+    Firebase.database().ref('Recipes/' + my_name).set({
+        my_name: my_name,
         recipe_name: recipe_name,
         cuisine: cuisine,
         ingredient1: ingredient1
@@ -52,41 +54,29 @@ class App extends React.Component {
 
 
 
-    if (uid && recipe_name && ingredient1 && cuisine) {
+    if (uid && my_name && recipe_name && ingredient1 && cuisine) {
       const { recipelist } = this.state;
       const devIndex = recipelist.findIndex((data) => {
         return data.uid === uid;
       });
+      recipelist[devIndex].my_name = my_name;
       recipelist[devIndex].recipe_name = recipe_name;
       recipelist[devIndex].ingredient1 = ingredient1;
       recipelist[devIndex].cuisine= cuisine;
       this.setState({ recipelist });
-    } else if (recipe_name && ingredient1 && cuisine) {
+    } else if (my_name && recipe_name && ingredient1 && cuisine) {
       const uid = new Date().getTime().toString();
       const { recipelist } = this.state;
-      recipelist.push({ uid, recipe_name, ingredient1, cuisine });
+      recipelist.push({ uid, my_name, recipe_name, ingredient1, cuisine });
       this.setState({ recipelist });
     }
-
+    this.refs.my_name.value = "";
     this.refs.recipe_name.value = "";
     this.refs.ingredient1.value = "";
     this.refs.cuisine.value = "";
     this.refs.uid.value = "";
   };
 
-//   removeData = (developer) => {
-//     const { recipelist } = this.state;
-//     const newState = recipelist.filter(data => {
-//       return data.uid !== developer.uid;
-//     });
-//     this.setState({ recipelist: newState });
-//   }
-updateData = (developer) => {
-    this.refs.uid.value = developer.uid;
-    this.refs.recipe_name.value = developer.recipe_name;
-    this.refs.ingredient1.value = developer.ingredient1;
-    this.refs.cuisine.value = developer.cuisine;
-  }
 
   render() {
     const { recipelist } = this.state;
@@ -101,8 +91,9 @@ updateData = (developer) => {
                   className="card float-left"
                   style={{ width: "18rem", marginRight: "1rem" }}
                 >
-                  <div className="card-body">
-                    <h2 >Your Recipe</h2>
+                  {/* <div className="card-body">
+                    <h2 >Your Recipe</h2> */}
+                    {/* <h5 className="card-title">{developer.my_name}</h5>
                     <h5 className="card-title">{developer.recipe_name}</h5>
                     <p className="card-text">{developer.ingredient1}</p>
                     <p className="card-text">{developer.cuisine}</p>
@@ -118,7 +109,7 @@ updateData = (developer) => {
                     >
                       Edit
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               ))}
             </div>
@@ -130,6 +121,15 @@ updateData = (developer) => {
               <form onSubmit={this.handleSubmit}>
                 <div className="form-row">
                   <input type="hidden" ref="uid" />
+                  <div className="form-group col-md-6">
+                    <label>My Name</label>
+                    <input
+                      type="text"
+                      ref="my_name"
+                      className="form-control"
+                      placeholder="My Name"
+                    />
+                  </div>
                   <div className="form-group col-md-6">
                     <label>Recipe Name</label>
                     <input
