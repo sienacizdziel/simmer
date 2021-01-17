@@ -5,6 +5,8 @@ import ConnectionStatus from '../vonage-components/ConnectionStatus';
 import Publisher from '../vonage-components/Publisher';
 import Subscriber from '../vonage-components/Subscriber';
 import { Link } from 'react-router-dom';
+import { withRouter } from "react-router";
+
 
 class Call extends React.Component {
     constructor(props) {
@@ -28,9 +30,11 @@ class Call extends React.Component {
     }
 
   render () {
+
+    var recipe = this.props.id;
+    recipe = recipe.split("-").join(" ");
       return (
         <>
-        <button><Link to="/call">leave call</Link></button>
         {(!this.props.apiKey || !this.props.sessionId || !this.props.token) ? <span></span> :
             <OTSession
             apiKey={this.props.apiKey}
@@ -39,9 +43,11 @@ class Call extends React.Component {
             eventHandlers={this.sessionEvents}
             onError={this.onError}
             >
+            <h1 className="call-recipe"><strong>Recipe:</strong> {recipe}</h1>
               {this.state.error ? <div id="error">{this.state.error}</div> : null}
               <ConnectionStatus connected={this.state.connected} />
-              <Publisher />
+              <button className="leave-call"><Link className="leave-call-link" to="/convos">leave call</Link></button>
+              <Publisher className="publisher"/>
               <OTStreams>
                 <Subscriber />
               </OTStreams>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { uniqueId } from 'lodash';
+import './vonage-styles.css';
 
 class CheckBox extends React.Component {
   constructor(props) {
@@ -26,9 +27,9 @@ class CheckBox extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="checkbox-div">
         <label htmlFor={this.state.id}>
-          {this.props.label}
+          {this.props.label + '  '}
         </label>
         <input
           type="checkbox"

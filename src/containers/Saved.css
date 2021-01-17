@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Quicksand&display=swap");
+
+* {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.AddRecipe {
+    text-align: center;
+}
+
+
+
+li {
+    font-size: 16px;
+}
+
+#list {
+    float: left;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin: 2vh;
+    margin-right: auto;
+    height: 55vh;
+    width: 98%;
+    background-color: white;
+    color: white;
+    text-align: left;
+    padding: 2vh;
+    overflow: scroll;
+}
+
+.card {
+    float: left;
+    margin: 1vh;
+    margin-right: 2vh;
+    box-shadow: 0px 1px 3px black;
+}
+
+.image {
+    height: 19vh;
+    width: 19vh;
+    border: 3px solid #D96704;
+    background-color: white;
+    transition: 0.3s ease-in-out;
+    font-size: 2.5vh;
+    border-radius: 50%;
+    color: black;
+    float: center;
+}
+
+.clearer {
+	clear: both;
+}
+
+
+.bookmark {
+    float: right;
+}
+
+.save {
+    color: white;
+    text-decoration: none;
+    font-size: 3vh;
+    margin-left: 50px;
+    font-weight: 600;
+    padding: 1%; 
+    border-radius: 8px;
+    background-color: #D96704;
+    box-shadow: 1px 3px 4px rgba(0,0,0,0.3);
+    transition: 0.3s ease-in-out;
+}

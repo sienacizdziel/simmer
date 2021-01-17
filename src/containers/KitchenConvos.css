@@ -1,0 +1,116 @@
+.kitchen-left {
+    width: 40%;
+    float: left;
+    background-color: #A9BF04;
+    margin-left: 2vh;
+    margin-top: 2vh;
+    color: white;
+    padding: 5vh;
+    font-weight: 800;
+    height: 56vh;
+    overflow-y: none;
+}
+
+.kitchen-title {
+    margin-left: 5vh;
+    margin-top: 15%;
+    font-weight: 600;
+    font-size: 7vh;
+}
+
+.kitchen-title-2 {
+    margin-top: 0px;
+    margin-bottom: 5%;
+}
+
+.kitchen-left h2 {
+    text-align: left;
+}
+
+.phone {
+    float: right;
+    margin-right: 3vh;
+    width: 20vh;
+    margin-top: -22vh;
+}
+
+.kitchen-right {
+    width: 56%;
+    padding: 2vh;
+    margin: 2vh;
+    margin-left: 0vh;
+    background-color: #A9BF04;
+    height: 56vh;
+    float: right;
+}
+
+.kitchen-right h2 {
+    color: white;
+    font-weight: 700;
+    padding: 2vh;
+    text-align: center;
+}
+
+.carousel {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.kitchen-card {
+    display: inline-block;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: 2vh;
+    height: 40vh;
+    width: 28vh;
+}
+
+.kitchen-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transform: translate(0, -1px);
+}
+
+.kitchen-card button {
+    font-size: 3vh;
+    background-color: #D96704;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    margin-top: 75%;
+    margin-left: -52%;
+}
+
+.kitchen-card button:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transform: translate(0, -1px);
+}
+
+.kitchen-card button .call-link {
+    color: white;
+    text-decoration: none;
+}
+
+.kitchen-card h3 {
+    margin-top: 4vh;
+    text-align: center;
+    font-weight: 700;
+}
+
+.kitchen-card .image {
+    height: 18vh;
+    width: 18vh;
+    border: 3px solid #D96704;
+    background-color: white;
+    transition: 0.3s ease-in-out;
+    font-size: 2.5vh;
+    border-radius: 50%;
+    color: black;
+    margin-top: 5%;
+    float: left;
+    margin-left: 18%;
+}
+
+.kitchen-card .image:hover {
+    box-shadow: none;
+    transform: none;
+}
