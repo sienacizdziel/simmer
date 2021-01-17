@@ -23,7 +23,7 @@ class App extends React.Component {
           <Link className="link" to="/search">Search</Link>
         </div>
         <Link className="link profile-link" to="/profile">User Profile</Link>
-        <Link className="simmer-text" to="/"><img className="simmer" src={logo} alt="Simmer"/></Link>
+        <img className="simmer" src={logo} alt="Simmer"/>
       </div>
       <Routes 
         apiKey={this.props.apiKey}
