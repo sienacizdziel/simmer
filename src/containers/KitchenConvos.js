@@ -1,9 +1,9 @@
 import React from "react";
-import "./KitchenCalling.css";
+import "./KitchenConvos.css";
 import { Link } from "react-router-dom";
 import phone from "../images/phone.svg";
 
-export default function KitchenCalling() {
+export default function KitchenConvos() {
   return (
   <>
   <div className="kitchen-left">

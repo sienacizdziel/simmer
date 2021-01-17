@@ -31,7 +31,7 @@ class App extends React.Component {
             <>
         <div className="MainDiv">
         <div class="jumbotron text-center bg-sky">
-            <h3>Firebase Data</h3>
+            <h3>Recipes</h3>
         </div>
       
         <div className="container">
@@ -45,22 +45,20 @@ class App extends React.Component {
               </thead>
               <tbody>
               {this.state.recipelist.map(data => {
-                  
                   return (
                       <tr>     
+                      <td>{data.recipe_name}</td>
                       <td>{data.cuisine}</td>
                       <td>{data.ingredient1}</td>
                       </tr>
-                      
                   );
-                 
                   })}         
               </tbody>
               
            </table>
        </div>
        <div class="jumbotron text-center bg-sky">
-            <h3>User List</h3>
+            <h3>Friend List</h3>
         </div>
 
        <div className="container">
@@ -77,8 +75,9 @@ class App extends React.Component {
                   
                   return (
                       <tr>     
+                      <td>{data.friendname}</td>
                       <td>{data.cuisine}</td>
-                      <td>{data.ingredient1}</td>
+                      <td>{data.cookingtonight}</td>
                       </tr>
                       
                   );

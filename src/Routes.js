@@ -8,9 +8,8 @@ import FindRecipe from "./containers/FindRecipe";
 import Call from "./containers/Call";
 import Saved from "./containers/Saved";
 import Profile from "./containers/Profile";
-import KitchenCalling from "./containers/KitchenCalling";
+import KitchenConvos from "./containers/KitchenConvos";
 import { preloadScript } from 'opentok-react';
-import withRouter from 'react-router';
 
 
 class Routes extends React.Component {
@@ -26,8 +25,8 @@ class Routes extends React.Component {
         <Route exact path="/saved">
             <Saved />
         </Route>
-        <Route exact path="/call">
-            <KitchenCalling />
+        <Route exact path="/convos">
+            <KitchenConvos />
         </Route>
         <Route exact path="/call/:id" render={({match}) => (
           <Call 
