@@ -2,6 +2,30 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
+.connectionStatus {
+  padding-top: 20px;
+  margin-left: 5%;
+  font-size: 1.5em;
+}
+
+.subscriber {
+  margin-left: 10%;
+}
+
+.publisher {
+  float: right;
+  margin-right: 10%;
+}
+
+.OTPublisherContainer {
+  width: 80vh !important;
+  height: 80vh !important;
+}
+
+#error {
+  color: red;
+}
+
 .navbar {
   background-color:#EDB245;
   text-align: center;
