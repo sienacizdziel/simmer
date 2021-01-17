@@ -70,30 +70,6 @@ export default function Home() {
     </div>
 
     <div id="social">
-    <div className="container">
-          <table id="example" class="display table">
-            <thead class="thead-dark">
-                <tr>
-                    <th>FirstName</th>
-                    <th>Lastname</th>
-                    <th>Email</th>
-                    <th>Mobile</th>
-                </tr>
-            </thead>
-            <tbody>
-            {this.state.studentslist.map(data => {
-                return (
-                    <tr>     
-                    <td>{data.firstName}</td>
-                    <td>{data.lastName}</td>
-                    <td>{data.email}</td>
-                    <td>{data.mobileNumber}</td>
-                    </tr>
-                );
-                })}
-            </tbody>
-         </table>
-         </div>
 
       <h1>Social</h1>
       <h2>see what your friends are cooking!</h2>

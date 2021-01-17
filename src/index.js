@@ -4,10 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom'; // uses browser's history API to create real URLs
+import config from './config';
 
 ReactDOM.render(
   <Router>
-    <App />
+    <App 
+    apiKey={config.API_KEY}
+    sessionId={config.SESSION_ID}
+    token={config.TOKEN}/>
   </Router>,
   document.getElementById('root')
 );
