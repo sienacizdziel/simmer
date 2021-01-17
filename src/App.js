@@ -16,14 +16,14 @@ class App extends React.Component {
       <div className="navbar">
         <div className="link-container">
           <Link className="link" to="/">Home</Link>
-          <Link className="link" to="/call">Kitchen Calling</Link>
+          <Link className="link" to="/convos">Kitchen Convos</Link>
           <Link className="link" to="/addrecipe">Add Recipe</Link>
           <Link className="link" to="/recipe">Find a Recipe</Link>
           <Link className="link" to="/saved">Saved Recipes</Link>
           <Link className="link" to="/search">Search</Link>
         </div>
         <Link className="link profile-link" to="/profile">User Profile</Link>
-        <Link className="simmer-text" to="/"><img className="simmer" src={logo} alt="Simmer"/></Link>
+        <img className="simmer" src={logo} alt="Simmer"/>
       </div>
       <Routes 
         apiKey={this.props.apiKey}
