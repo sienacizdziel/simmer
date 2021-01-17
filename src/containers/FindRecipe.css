@@ -1,34 +1,43 @@
 .searchbar{
     text-align: center;
-    font-size: 43px;
+    font-size: 40px;
     padding: 3px;
     border: 1px;
     border-color: black;
     border-radius: 15px 50px 30px 5px;
+    margin:0px;
+}
+
+input[type="text"] {
+    width: auto;
+}
+
+.container{
+    margin-left:150px;
+    margin-right:5px;
 }
 
 .images{
-    display:flex;
-    margin: auto;
+    display: inline-block;
+    margin: 25px;
     box-shadow: 2px 2px 4px 1px black;
     padding: 5px;
     opacity: 1;
-    display: block;
-    width: 100%;
+    width: 5px;
     height: auto;
     transition: .5s ease;
     backface-visibility: hidden;
 }
 
-#leftimg{
+.left{
     text-align: left;
 }
 
-#middleimg{
-    text-align: center;
+.middle{
+   text-align: center;
 }
 
-#rightimg{
+.right{
     text-align: right;
 }
 
@@ -48,7 +57,7 @@ h2{
     text-align: center;
   }
   
-  .left:hover #leftimg{
+  .container:hover .left{
     opacity: 0.3;
   }
   
