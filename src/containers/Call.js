@@ -46,7 +46,7 @@ class Call extends React.Component {
             <h1 className="call-recipe"><strong>Recipe:</strong> {recipe}</h1>
               {this.state.error ? <div id="error">{this.state.error}</div> : null}
               <ConnectionStatus connected={this.state.connected} />
-              <button className="leave-call"><Link className="leave-call-link" to="/call">leave call</Link></button>
+              <button className="leave-call"><Link className="leave-call-link" to="/convos">leave call</Link></button>
               <Publisher className="publisher"/>
               <OTStreams>
                 <Subscriber />
