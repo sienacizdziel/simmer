@@ -11,19 +11,15 @@ class App extends React.Component {
       }
       
     componentDidMount() {
-     
-     
-       
+
         firebase.database().ref("Recipes").on("value", snapshot => {
           let recipelist = [];
           snapshot.forEach(snap => {
-              // snap.val() is the dictionary with all your keys/values from the 'students-list' path
+              // snap.val() is the dictionary with all your keys/values from the 'recipeslist' path
               recipelist.push(snap.val());
           });
           this.setState({ recipelist: recipelist });
         });
-      
-      
    }
     
     render(){
@@ -46,11 +42,13 @@ class App extends React.Component {
               <tbody>
               {this.state.recipelist.map(data => {
                   return (
-                      <tr>     
+                    <>
+                      <tr>
                       <td>{data.recipe_name}</td>
-                      <td>{data.cuisine}</td>
                       <td>{data.ingredient1}</td>
+                      <td>{data.cuisine}</td>
                       </tr>
+                  </>
                   );
                   })}         
               </tbody>
@@ -87,6 +85,36 @@ class App extends React.Component {
               
            </table>
        </div>
+       
+
+       <div class="jumbotron text-center bg-sky">
+            <h3>Favorite Recipes</h3>
+        </div>
+
+       <div className="container">
+            <table id="example" class="display table">
+              <thead class="thead-dark">
+                  <tr>
+                      <th>Recipe Name</th>
+                      <th>Ingredient 1</th>
+                      <th>Cuisine</th>
+                  </tr>
+              </thead>
+              <tbody>
+              {this.state.recipelist.map(data => {
+                  return (
+                      <tr>     
+                      <td>{data.recipe_name}</td>
+                      <td>{data.ingredient1}</td>
+                      <td>{data.cuisine}</td>
+                      </tr>
+                  );
+                  })}         
+              </tbody>
+              
+           </table>
+       </div>
+
 
       </div>
 
