@@ -72,5 +72,7 @@ body {
 .simmer {
   height: 27.4vh;
   width: 68.4;
-  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
