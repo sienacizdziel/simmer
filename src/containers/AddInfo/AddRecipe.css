@@ -48,8 +48,9 @@ li {
     overflow: scroll;
 }
 
-
-
+#submit {
+    float: right;
+}
 
 .image {
     height: 19vh;
