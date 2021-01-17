@@ -4,34 +4,27 @@
     font-family: 'Quicksand', sans-serif;
 }
 
-.Recipe {
+.AddRecipe {
     text-align: center;
 }
 
-#wrapper {
+li {
+    font-size: 16px;
+}
+
+
+#wrap {
     width: fit-content;
     float: left;
     overflow: hidden; /* will contain if #first is longer than #second */
 }
 
-#info {
-    float: right;
+#recipe {
+    float: left;
     position: relative;
     margin: 2vh;
     height: 50vh;
-    width: 77%;
-    background-color: #EDB245;
-    color: white;
-    text-align: left;
-    padding: 2vh;
-    overflow: scroll;
-}
-
-#name {
-    float: left;
-    margin: 2vh;
-    height: 50vh;
-    width: 30vh;
+    width: 32vh;
     background-color: grey;
     color: white;
     text-align: center;
@@ -39,6 +32,23 @@
     overflow: scroll;
     overflow-x: hidden;
 }
+
+#menu {
+    float: left;
+    display: inline;
+    position: absolute;
+    margin: 2vh;
+    margin-right: auto;
+    height: 50vh;
+    width: 80%;
+    background-color: #EDB245;
+    color: white;
+    text-align: left;
+    padding: 2vh;
+    overflow: scroll;
+}
+
+
 
 
 .image {
@@ -57,9 +67,6 @@
 	clear: both;
 }
 
-li {
-    font-size: 16px;
-}
 
 .bookmark {
     float: right;
