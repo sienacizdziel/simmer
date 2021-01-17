@@ -31,7 +31,7 @@ class App extends React.Component {
             <>
         <div className="MainDiv">
         <div class="jumbotron text-center bg-sky">
-            <h3>Firebase Data</h3>
+            <h3>Recipes</h3>
         </div>
       
         <div className="container">
@@ -58,7 +58,7 @@ class App extends React.Component {
            </table>
        </div>
        <div class="jumbotron text-center bg-sky">
-            <h3>User List</h3>
+            <h3>Friend List</h3>
         </div>
 
        <div className="container">
