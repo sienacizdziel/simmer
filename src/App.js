@@ -1,11 +1,18 @@
 import './App.css';
+import React from 'react';
 import Routes from './Routes';
 import { Link } from "react-router-dom";
 import logo from './images/logo.svg';
+import { preloadScript } from 'opentok-react';
 
-function App() {
-  return (
-    <div className="App">
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render () {
+    return (
+      <>
+      <div className="App">
       <div className="navbar">
         <div className="link-container">
           <Link className="link" to="/">Home</Link>
@@ -18,9 +25,14 @@ function App() {
         <Link className="link profile-link" to="/profile">User Profile</Link>
         <Link className="simmer-text" to="/"><img className="simmer" src={logo} alt="Simmer"/></Link>
       </div>
-      <Routes />
+      <Routes 
+        apiKey={this.props.apiKey}
+        sessionId={this.props.sessionId}
+        token={this.props.token}/>
     </div>
+    </>
   );
+    }
 }
 
-export default App;
+export default preloadScript(App);

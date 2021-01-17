@@ -1,7 +1,27 @@
 .searchbar{
     text-align: center;
+    font-size: large;
     padding: 3px;
     border: 1px;
     border-color: black;
     border-radius: 2px;
+}
+
+.img{
+    display:block;
+    margin: auto;
+    box-shadow: 2px 2px 4px 1px black;
+    width: 100%;
+}
+
+#leftimg{
+    text-align: left;
+}
+
+#middleimg{
+    text-align: center;
+}
+
+#rightimg{
+    text-align: right;
 }
