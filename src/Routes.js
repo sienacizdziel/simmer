@@ -10,6 +10,7 @@ import Saved from "./containers/Saved";
 import Profile from "./containers/Profile";
 import KitchenCalling from "./containers/KitchenCalling";
 import { preloadScript } from 'opentok-react';
+import withRouter from 'react-router';
 
 
 class Routes extends React.Component {
@@ -28,12 +29,12 @@ class Routes extends React.Component {
         <Route exact path="/call">
             <KitchenCalling />
         </Route>
-        <Route exact path="/call/:id">
-            <Call 
+        <Route exact path="/call/:id" render={({match}) => (
+          <Call 
                 apiKey={this.props.apiKey}
                 sessionId={this.props.sessionId}
-                token={this.props.token}/>
-        </Route>
+                token={this.props.token}
+                id={match.params.id}/>)}/>
         <Route exact path="/addrecipe">
             <AddRecipe />
         </Route>
