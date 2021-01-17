@@ -1,0 +1,31 @@
+.publisher {
+    margin-top: -10vh;
+    margin-bottom: 5vh;
+}
+
+.leave-call {
+    background-color: #D96704;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    margin-top: 10px;
+    margin-left: 5%;
+    font-size: 1.15em;
+    float: left;
+}
+
+.leave-call .leave-call-link {
+    text-decoration:  none;
+    color: white;
+}
+
+.leave-call:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transform: translate(0, -1px);
+}
+
+.call-recipe {
+    margin-left: 5%;
+    margin-top: 3%;
+    text-transform: capitalize;
+}

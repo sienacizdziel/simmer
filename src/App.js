@@ -16,7 +16,7 @@ class App extends React.Component {
       <div className="navbar">
         <div className="link-container">
           <Link className="link" to="/">Home</Link>
-          <Link className="link" to="/call">Kitchen Calling</Link>
+          <Link className="link" to="/convos">Kitchen Convos</Link>
           <Link className="link" to="/addrecipe">Add Recipe</Link>
           <Link className="link" to="/recipe">Find a Recipe</Link>
           <Link className="link" to="/saved">Saved Recipes</Link>
