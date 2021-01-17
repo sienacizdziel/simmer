@@ -13,6 +13,7 @@ function App() {
           <Link className="link" to="/addrecipe">Add Recipe</Link>
           <Link className="link" to="/recipe">Find a Recipe</Link>
           <Link className="link" to="/saved">Saved Recipes</Link>
+          <Link className="link" to="/search">Search</Link>
         </div>
         <Link className="link profile-link" to="/profile">User Profile</Link>
         <Link className="simmer-text" to="/"><img className="simmer" src={logo} alt="Simmer"/></Link>
