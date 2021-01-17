@@ -54,6 +54,8 @@ body {
 .link:hover {
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   transform: translate(0, -1px);
+  text-decoration: none;
+  color: white;
 }
 
 .profile-link {
