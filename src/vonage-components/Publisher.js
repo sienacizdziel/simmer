@@ -2,6 +2,7 @@
 import React from 'react';
 import { OTPublisher } from 'opentok-react';
 import CheckBox from './CheckBox';
+import './vonage-styles.css';
 
 class Publisher extends React.Component {
     constructor(props) {
@@ -32,8 +33,19 @@ class Publisher extends React.Component {
     render() {
         return (
             <div className="publisher">
-            Publisher
             {this.state.error ? <div id="error">{this.state.error}</div> : null}
+            <CheckBox
+            label="Mic"
+            initialChecked={this.state.audio}
+            onChange={this.setAudio}
+            className="checkbox-publisher"
+            />
+            <CheckBox
+            label="Camera"
+            initialChecked={this.state.video}
+            onChange={this.setVideo}
+            className="checkbox-publisher"
+            />
             <OTPublisher
                 properties={{
                 publishAudio: this.state.audio,
@@ -41,20 +53,6 @@ class Publisher extends React.Component {
                 videoSource: this.state.videoSource === 'screen' ? 'screen' : undefined
                 }}
                 onError={this.onError}
-            />
-            <CheckBox
-            label="Share Screen"
-            onChange={this.changeVideoSource}
-            />
-            <CheckBox
-            label="Publish Audio"
-            initialChecked={this.state.audio}
-            onChange={this.setAudio}
-            />
-            <CheckBox
-            label="Publish Video"
-            initialChecked={this.state.video}
-            onChange={this.setVideo}
             />
             </div>
         );

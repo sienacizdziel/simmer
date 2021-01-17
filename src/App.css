@@ -18,8 +18,8 @@ body {
 }
 
 .OTPublisherContainer {
-  width: 80vh !important;
-  height: 80vh !important;
+  width: 70vh !important;
+  height: 70vh !important;
 }
 
 #error {
@@ -30,6 +30,7 @@ body {
   background-color:#EDB245;
   text-align: center;
   margin: 2vh;
+  height: 35vh;
 }
 
 .link-container {
@@ -71,4 +72,5 @@ body {
 .simmer {
   height: 27.4vh;
   width: 68.4;
+  text-align: center;
 }
