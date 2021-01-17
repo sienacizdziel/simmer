@@ -1,0 +1,15 @@
+label {
+    padding: 10px;
+    margin-left: 25px;
+    font-size: 3vh;
+    font-weight: 600;
+}
+
+.checkbox-div {
+    float: right;
+    margin-top: 20px;
+}
+
+input {
+    width: 40px;
+}
