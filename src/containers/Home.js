@@ -45,15 +45,13 @@ class App extends React.Component {
               </thead>
               <tbody>
               {this.state.recipelist.map(data => {
-                  
                   return (
                       <tr>     
+                      <td>{data.recipe_name}</td>
                       <td>{data.cuisine}</td>
                       <td>{data.ingredient1}</td>
                       </tr>
-                      
                   );
-                 
                   })}         
               </tbody>
               
@@ -77,8 +75,9 @@ class App extends React.Component {
                   
                   return (
                       <tr>     
+                      <td>{data.friendname}</td>
                       <td>{data.cuisine}</td>
-                      <td>{data.ingredient1}</td>
+                      <td>{data.cookingtonight}</td>
                       </tr>
                       
                   );
