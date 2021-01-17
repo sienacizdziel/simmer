@@ -29,7 +29,7 @@ class App extends React.Component {
     console.log("DATA SAVED");
   };
   getUserData = () => {
-    let ref = Firebase.database().ref('/');
+    let ref = Firebase.database().ref("Recipes");
     ref.on('value', snapshot => {
       const state = snapshot.val();
       this.setState(state);
@@ -40,31 +40,47 @@ class App extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
     let name = this.refs.name.value;
-    let ingredient = this.refs.ingredient.value;
+    let ingredient1 = this.refs.ingredient1.value;
     let cuisine = this.refs.cuisine.value;
     let uid = this.refs.uid.value;
 
-    if (uid && name && ingredient && cuisine) {
+    Firebase.database().ref('Recipes/' + name).set({
+        name: name,
+        cuisine: cuisine,
+        ingredient1: ingredient1
+      });
+
+
+
+    if (uid && name && ingredient1 && cuisine) {
       const { recipelist } = this.state;
       const devIndex = recipelist.findIndex((data) => {
         return data.uid === uid;
       });
       recipelist[devIndex].name = name;
-      recipelist[devIndex].ingredient = ingredient;
+      recipelist[devIndex].ingredient1 = ingredient1;
       recipelist[devIndex].cuisine= cuisine;
       this.setState({ recipelist });
-    } else if (name && ingredient && cuisine) {
+    } else if (name && ingredient1 && cuisine) {
       const uid = new Date().getTime().toString();
       const { recipelist } = this.state;
-      recipelist.push({ uid, name, ingredient, cuisine });
+      recipelist.push({ uid, name, ingredient1, cuisine });
       this.setState({ recipelist });
     }
 
     this.refs.name.value = "";
-    this.refs.ingredient.value = "";
+    this.refs.ingredient1.value = "";
     this.refs.cuisine.value = "";
     this.refs.uid.value = "";
   };
+
+//   removeData = (developer) => {
+//     const { recipelist } = this.state;
+//     const newState = recipelist.filter(data => {
+//       return data.uid !== developer.uid;
+//     });
+//     this.setState({ recipelist: newState });
+//   }
 
   render() {
     const { recipelist } = this.state;
@@ -80,8 +96,9 @@ class App extends React.Component {
                   style={{ width: "18rem", marginRight: "1rem" }}
                 >
                   <div className="card-body">
+                    <h2 >Your Recipe</h2>
                     <h5 className="card-title">{developer.name}</h5>
-                    <p className="card-text">{developer.ingredient}</p>
+                    <p className="card-text">{developer.ingredient1}</p>
                     <p className="card-text">{developer.cuisine}</p>
                     <button
                       onClick={() => this.removeData(developer)}
@@ -100,7 +117,7 @@ class App extends React.Component {
               ))}
             </div>
           </div>
-          <div id="menu">
+          <div id="menu">∂
           <div className="row">
             <div className="col-xl-12">
               <h1>My Recipe</h1>
@@ -120,7 +137,7 @@ class App extends React.Component {
                     <label>Ingredient</label>
                     <input
                       type="text"
-                      ref="ingredient"
+                      ref="ingredient1"
                       className="form-control"
                       placeholder="Ingredient"
                     />
@@ -143,53 +160,6 @@ class App extends React.Component {
           </div>
           </div>
         </div>
-        {/* <div id="wrap">
-          <div id="recipe">
-            <h1> Recipe Name </h1>
-            <div>
-              <button className="image">image</button>
-            </div>
-            <h2>Type</h2>
-            <h2>Category</h2>
-            <h2>Rating</h2>
-          </div>
-          <div id="menu">
-            <Form>
-              <Form.Group controlId="exampleForm.ControlInput1">
-                <Form.Label>Name</Form.Label>
-                <Form.Control size="lg" type="name" />
-              </Form.Group>
-              <Form.Group controlId="exampleForm.ControlInput1">
-                <Form.Label>Type</Form.Label>
-                <Form.Control size="lg" type="name" />
-              </Form.Group>
-              <Form.Group controlId="exampleForm.ControlSelect1">
-                <Form.Label>Category</Form.Label>
-                <Form.Control as="select">
-                  <option>option 1</option>
-                  <option>option 2</option>
-                  <option>option 3</option>
-                  <option>option 4</option>
-                  <option>option 5</option>
-                </Form.Control>
-              </Form.Group>
-              <Form.Group controlId="exampleForm.ControlTextarea1">
-                <Form.Label>Ingredients</Form.Label>
-                <Form.Control as="textarea" rows={6} />
-              </Form.Group>
-              <Form.Group controlId="exampleForm.ControlTextarea2">
-                <Form.Label>Directions</Form.Label>
-                <Form.Control as="textarea" rows={4} />
-              </Form.Group>
-            </Form>
-            <button type="submit" className="btn btn-primary">
-                  Add Recipe
-            </button>
-            <div id="submit">
-              <Button type="submit" className="btn btn-primary"> Submit Recipe</Button>
-            </div>
-          </div>
-        </div> */}
       </React.Fragment>
     );
   }
