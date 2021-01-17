@@ -1,26 +1,102 @@
 import React from "react";
 import "./Home.css";
-import firebase from 'firebase';
+import firebase from './backend/Firebase';
 
-var config = {
-  apiKey: "AIzaSyCjO5G0GcNPneTrBdracN1X6LSBDFAU7es",
-  authDomain: "simmer-hackthenorth.firebaseapp.com",
-  databaseURL: "https://simmer-hackthenorth-default-rtdb.firebaseio.com",
-  projectId: "simmer-hackthenorth",
-  storageBucket: "simmer-hackthenorth.appspot.com",
-  messagingSenderId: "980809921947",
-  appId: "1:980809921947:web:bfe55452134d18e0a39d3e",
-  measurementId: "G-D0JRLHDVNQ"
-};
 
-firebase.initializeApp(config);
-const database = firebase.database();
-const ref = database.ref('recipes');
+class App extends React.Component {
+  constructor(props) {
+      super(props);
+     
+      this.state = {recipelist : []}
+      }
+    componentDidMount() {
+       
+        firebase.database().ref("Recipes").on("value", snapshot => {
+          let recipelist = [];
+          snapshot.forEach(snap => {
+              // snap.val() is the dictionary with all your keys/values from the 'recipelist' path
+              recipelist.push(snap.val());
+          });
+          this.setState({ recipelist: recipelist });
+        });
+   }
+  }
+  
 
 
 export default function Home() {
-  return (
-  <>
+  return (      
+    <>
+    <div className="MainDiv">
+      <div class="jumbotron text-center bg-sky">
+          <h3>How to show firebase data in reactjs?</h3>
+      </div>
+      <div className="container">
+      {/* <table id="example" class="display table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>FirstName</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                </tr>
+            </thead>
+            <tbody>
+            {this.state.studentslist.map(data => {
+                
+                return (
+                    <tr>     
+                    <td>{data.firstName}</td>
+                    <td>{data.lastName}</td>
+                    <td>{data.email}</td>
+                    <td>{data.mobileNumber}</td>
+                    </tr>
+                );
+                })}
+            </tbody>
+            </table> */}
+      </div>
+      
+
+      
+    </div>
+    {/* <div className="MainDiv">
+      <div class="jumbotron text-center bg-sky">
+          <h3>How to show firebase data in reactjs?</h3>
+      </div>
+    
+      <div className="container">
+          <table id="example" class="display table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>FirstName</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                </tr>
+            </thead>
+            <tbody>
+            {this.state.recipelist.map(data => {
+                
+                return (
+                    <tr>     
+                    <td>{data.firstName}</td>
+                    <td>{data.lastName}</td>
+                    <td>{data.email}</td>
+                    <td>{data.mobileNumber}</td>
+                    </tr>
+                    
+                );
+               
+                })}
+            </tbody>
+            
+         </table>
+          
+     </div>
+    </div> */}
+  
+  
     <div id="charts">
       <h1>Top Charts</h1>
       <div>

@@ -8,6 +8,11 @@
     text-align: center;
 }
 
+li {
+    font-size: 16px;
+}
+
+
 #wrapper {
     width: fit-content;
     float: left;
@@ -15,11 +20,11 @@
 }
 
 #info {
-    float: right;
+    float: left;
     position: relative;
     margin: 2vh;
     height: 50vh;
-    width: 77%;
+    width: 80%;
     background-color: #EDB245;
     color: white;
     text-align: left;
@@ -31,7 +36,7 @@
     float: left;
     margin: 2vh;
     height: 50vh;
-    width: 30vh;
+    width: 32vh;
     background-color: grey;
     color: white;
     text-align: center;
@@ -57,9 +62,6 @@
 	clear: both;
 }
 
-li {
-    font-size: 16px;
-}
 
 .bookmark {
     float: right;
